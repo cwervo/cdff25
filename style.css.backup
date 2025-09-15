@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+Mono:wght@100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    color: #DDD;
+    background-color: #456;
+    background-color: #345;
+    background-color: #234;
+    /* background-color: #123; */
+
+    margin: 0 auto;
+    padding: 3% 10%;
+    font-size: 14pt;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #123;
+    color: #DDD;
+}
+
+h1, h2, h3 {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #456;
+    background-color: #DDD;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italicize {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.float {
+    position: absolute;
+}
+
+a {
+  color: cyan;
+}
+
+a:visited {
+  color: magenta;
+}
+
+
+a:hover {
+  color: lavender;
+  letter-spacing: 1px;
+}
+
+#homepageLink {
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+.todo {
+  background-color: gold;
+  color: navy;
+  font-size: 1.6rem;
+}
+
+/*
+TODO: some sort of gradient mesh or radial gradient thing with CSS colors in the background IDK lol
+*/
+
+/* ====== Table styles ===== */
+caption {
+  text-decoration: underline;
+  font-size: 1.6em;
+  text-align: left;
+  margin-bottom: 0.5cm;
+}
+
+table {
+  max-width: 100%;
+}
+
+table.stylize {
+  margin-right: auto;
+  margin-left: 0px;
+  text-align: left;
+  width: 90%;
+}
+
+
+table.stylize > tbody > tr > td:nth-child(1) {
+  width: 20%;
+}
+
+table.stylize thead {
+  text-decoration: underline;
+}
+
+table.stylize th,
+table.stylize > tbody > tr > td {
+  /* /* border-right: 1px solid white;
+  border-left: 1px solid white; */
+  /* border-bottom: 1px solid white; */
+  /* border-top: 1px solid white; */
+  /* border: 1px solid white; */
+  padding: 0 0.76rem;
+}
+
+@media print {
+  table.stylize th,
+  table.stylize > tbody > tr > td {
+    /* border-right: 1px solid #234; */
+    /* border: 1px solid #234; */
+    padding-top: 0.2cm;
+    padding-bottom: 0.2cm;
+  }
+}
+
+
+/* ===== Typography ===== */
+.ibm-plex-mono-thin {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-mono-extralight {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-mono-light {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-mono-medium {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-mono-semibold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-mono-bold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.sans {
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  @page {
+    size: Letter portrait;
+    margin: 0;
+    outline: 20px dashed magenta;
+  }
+  body {
+    font-size: 10pt;
+    margin: 2.2cm;
+    margin-right: 4cm;
+    margin-bottom: 3cm;
+  }
+
+  a, a:visited {
+    color: navy;
+  }
+
+  table.stylize th,
+  table.stylize > tbody > tr > td {
+    padding: 0 0.2cm;
+  }
+
+  h1, h2, h3, h4, h5 {
+    page-break-after: avoid;
+  }
+
+  .hideOnPrint {
+    display: none;
+  }
+}

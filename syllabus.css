@@ -1,0 +1,96 @@
+.course-info {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.course-info dt {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #9af; /* Light blue color for term */
+}
+
+.course-info dd {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+/* Mobile-first styles */
+.course-info {
+  display: block;
+}
+
+.course-info dt,
+.course-info dd {
+  padding: 5px 0;
+}
+
+/* Tablet and desktop styles */
+@media screen and (min-width: 768px) {
+  .course-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px 20px;
+    align-items: baseline;
+  }
+  
+  .course-info dt {
+    grid-column: 1;
+    margin-top: 0;
+    text-align: right;
+    padding-right: 10px;
+  }
+  
+  .course-info dd {
+    grid-column: 2;
+    margin-bottom: 5px;
+  }
+}
+
+/* Return to top button */
+.return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2EAFAC;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.return-to-top:hover { opacity: 1; }
+
+@media (max-width: 768px) {
+    .return-to-top {
+        width: 0.75in;
+        height: 0.75in;
+        line-height: 0.75in;
+        font-size: 16pt;
+    }
+}
+
+/* Additional styles for links within the definition list */
+.course-info a {
+  color: cyan;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.course-info a:hover,
+.course-info a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Style for the bold class, if used within the definition list */
+.course-info .bold {
+  font-weight: 700;
+}
